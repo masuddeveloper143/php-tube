@@ -15,6 +15,10 @@ function loadVideos() {
         .then((data) => displayVideos(data.videos));
 }
 
+const loadCategoryVideos = () => {
+    console.log(id);
+ }
+
 
 
 
@@ -87,6 +91,8 @@ const displayVideos = (videos) => {
     });
 
 };
+
+
 
 
 
