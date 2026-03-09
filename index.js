@@ -39,7 +39,7 @@ function displayCategories(categories) {
 
 
 const displayVideos = (videos) => {
-    const videosContainer = document.getElementById("videos-container")
+    const videosContainer = document.getElementById("videos-container");
 
 };
 
