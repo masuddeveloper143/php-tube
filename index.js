@@ -9,7 +9,8 @@ function lodCaregories() {
 };
 
 function displayCategories(categories) {
-    console.log(categories);
+    // console.log(categories);
+    const categoryContiner = document.getElementById('')
 }
 
 lodCaregories();
