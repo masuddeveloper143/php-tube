@@ -47,7 +47,7 @@ const displayVideos = (videos) => {
         const videoCrad = document.createElement("div");
         videoCrad.innerHTML = `
         
-      <div class="card bg-base-100 w-96 shadow-sm">
+      <div class="card bg-base-100  shadow-sm">
   <figure>
     <img
       src="${video.thumbnail} "
