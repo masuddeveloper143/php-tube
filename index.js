@@ -9,13 +9,11 @@ function lodCaregories() {
 };
 
 
-function loadVideos(){
+function loadVideos() {
     fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
-    .then((Response) => Response.json())
-    .then((data) => displayVideos(data.videos));
+        .then((Response) => Response.json())
+        .then((data) => displayVideos(data.videos));
 }
-
-
 
 
 
@@ -40,9 +38,10 @@ function displayCategories(categories) {
 
 
 
-const displayVideos = (videos)=>{
-    console.log(videos);
-}
+const displayVideos = (videos) => {
+    const videosContainer = document.getElementById("videos-container")
+
+};
 
 lodCaregories();
 loadVideos();
