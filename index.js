@@ -47,20 +47,37 @@ const displayVideos = (videos) => {
         const videoCrad = document.createElement("div");
         videoCrad.innerHTML = `
         
-      <div class="card bg-base-100  shadow-sm">
-  <figure>
-    <img
-      src="${video.thumbnail} "
-      alt="Shoes" />
-  </figure>
-  <div class="card-body">
-    <h2 class="card-title">${video.title} </h2>
-    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-    <div class="card-actions justify-end">
-      <button class="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+      <div class="card bg-base-100">
+                <figure class="relative">
+                    <img src="${video.} " alt="Shoes" />
+                    <span
+                        class="absolute bottom-2 right-2 text-gray-400 font-semibold  bg-black p-1 rounded-md text-center ">3hrs
+                        56 min ago</span>
+                </figure>
+                <div class="py-5 px-0 flex gap-4">
+                    <div>
+                        <div class="avatar">
+                            <div class="ring-primary ring-offset-base-100 w-10 rounded-full ring-2 ring-offset-2">
+                                <img src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <h2 class="font-bold">Building a Winning UX Strategy <br> Using the Kano Model</h2>
+                        <p class="text-gray-400 text-sm flex items-center gap-1">
+                            Awlad Hossain
+
+                            <img class="w-5 h-5 " src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000" alt="">
+
+                        </p>
+
+                        <span class="text-gray-400">91K views</span>
+                    </div>
+                </div>
+            </div>
+            </div>
         
         `;
 
