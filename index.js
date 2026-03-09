@@ -88,5 +88,6 @@ const displayVideos = (videos) => {
 
 };
 
+
+
 lodCaregories();
-loadVideos();
