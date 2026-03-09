@@ -10,7 +10,19 @@ function lodCaregories() {
 
 function displayCategories(categories) {
     // console.log(categories);
-    const categoryContiner = document.getElementById('')
+    const categoryContiner = document.getElementById('category-continer');
+
+    for (let cat of categories) {
+        console.log(cat);
+
+        const categorieDiv = document.createElement("div");
+        categorieDiv.innerHTML = `
+        <button class="btn btn-sm">${cat.category} </button>
+
+        `;
+
+        categoryContiner.append(categorieDiv);
+    }
 }
 
 lodCaregories();
