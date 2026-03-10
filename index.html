@@ -9,12 +9,12 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<style>
-    .active{
-        background-color: red;
-        color: white;
-    }
-</style>
+    <style>
+        .active {
+            background-color: red;
+            color: white;
+        }
+    </style>
 
 </head>
 
@@ -40,8 +40,7 @@
 
 
         <div id="category-continer" class="flex justify-center items-center gap-5 mt-10">
-            <button id="btn-all" onclick="loadVideos()"
-                class="btn btn-sm">all</button>
+            <button id="btn-all" onclick="loadVideos()" class="btn btn-sm">all</button>
             <!-- <button class="bg-gray-200 p-2 rounded-sm">Music</button>
             <button class="bg-gray-200 p-2 rounded-sm">Comedy</button>
             <button class="bg-gray-200 p-2 rounded-sm">Drawing</button> -->
@@ -60,24 +59,24 @@
         </section>
 
         <!-- Open the modal using ID.showModal() method -->
-<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
-<dialog id="vedio_details" class="modal">
-  <div class="modal-box">
+        <!-- <button class="btn" onclick="vedio_details.showModal()">open modal</button> -->
 
+        <dialog id="vedio_details" class="modal">
+            <div class="modal-box">
 
-    <div id="details-container">
-        
-    </div>
-    <!-- <h3 class="text-lg font-bold">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p> -->
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button class="btn">Close</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+                <div id="details-container"></div>
+
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Press ESC key or click the button below to close</p>
+
+                <div class="modal-action">
+                    <form method="dialog">
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+
+            </div>
+        </dialog>
 
     </header>
     <script src="index.js"></script>

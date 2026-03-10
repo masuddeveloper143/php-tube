@@ -30,9 +30,7 @@ function loadVideos() {
 
 const loadCategoryVideos = (id) => {
 
-    const url = `
-    https://openapi.programming-hero.com/api/phero-tube/category/${id}    
-    `;
+    const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`;
 
     console.log(url);
 
@@ -55,31 +53,25 @@ const loadCategoryVideos = (id) => {
 
 
 const lodVideoDetails = (videoId) => {
-    console.log(videoId)
-    const url = `https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`;
-    
-    fetch(url)
-        .then((res) => res.json())
-        .then((data) => displayVedioDetails(data.video));
-};
 
-const displayVedioDetails = (video) => {
-    console.log(video);
+    const url = `https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`;
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => displayVideoDetails(data.video));
+
+}
+
+const displayVideoDetails = (video) => {
 
     document.getElementById("vedio_details").showModal();
 
     const detailsContainer = document.getElementById("details-container");
 
-    detailsContainer.innerHTML =
-
-        `
-    
-<h2>${video.title}</h2>
-
- 
-    
-    `
-};
+    detailsContainer.innerHTML = `
+        <h2>${video.title}</h2>
+    `;
+}
 
 
 
