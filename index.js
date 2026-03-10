@@ -64,8 +64,21 @@ const lodVideoDetails = (videoId) => {
 };
 
 const displayVedioDetails = (video) => {
-
     console.log(video);
+
+    document.getElementById("vedio_details").showModal();
+
+    const detailsContainer = document.getElementById("details-container");
+
+    detailsContainer.innerHTML=
+    
+    `
+    
+
+
+ 
+    
+    `
 }
 
 
