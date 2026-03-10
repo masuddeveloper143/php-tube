@@ -67,12 +67,28 @@ const loadVideoDetails = (videoId) => {
 const displayVideoDetails = (video) => {
     console.log(video);
 
-    
+    document.getElementById("video_details").showModal();
 
     const detailsContainer = document.getElementById("details-container");
 
     detailsContainer.innerHTML = `
-        <h2>${video.title}</h2>
+
+
+       <div class="card bg-base-100 image-full  shadow-sm">
+  <figure>
+    <img
+      src="${video.thumbnail}"
+      alt="Shoes" />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">${video.title} </h2>
+    
+    <p>${video.description}</p>
+    <div class="card-actions justify-end">
+      
+    </div>
+  </div>
+</div>
     `;
 }
 
@@ -141,7 +157,7 @@ const displayVideos = (videos) => {
                 </div>
             </div>
 
-            <button onclick(loadVideoDetails('${video.video_id}') class="btn btn-block">show detiles</button>
+           <button onclick="loadVideoDetails('${video.video_id}')" class="btn btn-block">show details</button>
 
             </div>
         
