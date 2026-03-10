@@ -70,11 +70,11 @@ const displayVedioDetails = (video) => {
 
     const detailsContainer = document.getElementById("details-container");
 
-    detailsContainer.innerHTML=
-    
-    `
-    
+    detailsContainer.innerHTML =
 
+        `
+    
+<h2>${video.title}</h2>
 
  
     
