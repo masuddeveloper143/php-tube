@@ -81,8 +81,8 @@ const displayVideoDetails = (video) => {
       alt="Shoes" />
   </figure>
   <div class="card-body">
-    <h2 class="card-title">${video.title} </h2>
-    
+    <h2 class="card-title">${video.authors[0].profile_name} </h2>
+    <h1 class="card-title" >${video.title}</h1>
     <p>${video.description}</p>
     <div class="card-actions justify-end">
       
