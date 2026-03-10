@@ -1,5 +1,16 @@
 console.log("index is connected");
 
+function removeActiveClass(){
+    const acctiveButton = document.getElementsByClassName("active")
+
+for(let btn of acctiveButton){
+    btn.classList.remove()
+}
+
+    console.log(acctiveButton);
+}
+
+
 function lodCaregories() {
     fetch("https://openapi.programming-hero.com/api/phero-tube/categories")
 
