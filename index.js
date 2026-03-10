@@ -52,13 +52,14 @@ const loadCategoryVideos = (id) => {
 };
 
 
-const lodVideoDetails = (videoId) => {
+const loadVideoDetails = (videoId) => {
 
+    console.log(videoId)
     const url = `https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`;
 
     fetch(url)
         .then(res => res.json())
-        .then(data => displayVideoDetails(data.video));
+        .then((data) => displayVideoDetails(data.video));
 
 }
 
@@ -138,7 +139,7 @@ const displayVideos = (videos) => {
                 </div>
             </div>
 
-            <button onclick(lodVideoDetails('${video.video_id}')) class="btn btn-block">show detiles</button>
+            <button onclick(loadVideoDetails('${video.video_id}') class="btn btn-block">show detiles</button>
 
             </div>
         
