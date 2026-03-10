@@ -1,13 +1,11 @@
 console.log("index is connected");
 
-function removeActiveClass(){
+function removeActiveClass() {
     const acctiveButton = document.getElementsByClassName("active")
 
-for(let btn of acctiveButton){
-    btn.classList.remove()
-}
-
-    console.log(acctiveButton);
+    for (let btn of acctiveButton) {
+        btn.classList.remove("active");
+    }
 }
 
 
@@ -37,8 +35,8 @@ const loadCategoryVideos = (id) => {
 
     fetch(url)
         .then((res) => res.json())
-        .then((data) =>{
-
+        .then((data) => {
+            removeActiveClass();
             const clickBotton = document.getElementById(`btn-${id}`)
             clickBotton.classList.add("active");
             console.log("clicked button")
@@ -48,7 +46,7 @@ const loadCategoryVideos = (id) => {
 
         });
 
-        
+
 }
 
 
