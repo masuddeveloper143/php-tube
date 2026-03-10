@@ -61,11 +61,13 @@ const loadVideoDetails = (videoId) => {
         .then(res => res.json())
         .then((data) => displayVideoDetails(data.video));
 
+
 }
 
 const displayVideoDetails = (video) => {
+    console.log(video);
 
-    document.getElementById("vedio_details").showModal();
+    
 
     const detailsContainer = document.getElementById("details-container");
 
