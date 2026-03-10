@@ -118,6 +118,9 @@ const displayVideos = (videos) => {
                     </div>
                 </div>
             </div>
+
+            <button onclick(lodVideoDetails('${video.video_id}')) class="btn btn-block">show detiles</button>
+
             </div>
         
         `;
