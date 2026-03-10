@@ -56,8 +56,8 @@ const loadCategoryVideos = (id) => {
 
 const lodVideoDetails = (videoId) => {
     console.log(videoId)
-    const url = `https://openapi.programming-hero.com/api/phero-tube/video/aaac ${videoId}
-    `;
+    const url = `https://openapi.programming-hero.com/api/phero-tube/video/${videoId}`;
+    
     fetch(url)
         .then((res) => res.json())
         .then((data) => displayVedioDetails(data.video));
@@ -79,7 +79,7 @@ const displayVedioDetails = (video) => {
  
     
     `
-}
+};
 
 
 
