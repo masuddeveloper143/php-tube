@@ -18,8 +18,8 @@ function lodCaregories() {
 };
 
 
-function loadVideos() {
-    fetch("https://openapi.programming-hero.com/api/phero-tube/videos")
+function loadVideos(searchText = "") {
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title${searchText}`)
         .then((Response) => Response.json())
         .then((data) => {
             removeActiveClass();
@@ -81,7 +81,7 @@ const displayVideoDetails = (video) => {
       alt="Shoes" />
   </figure>
   <div class="card-body">
-    <h2 class="card-title">${video.authors[0].profile_name} </h2>
+    <h2 class="card-title">${video.authors[0].profile_name}</h2>
     <h1 class="card-title" >${video.title}</h1>
     <p>${video.description}</p>
     <div class="card-actions justify-end">
@@ -91,7 +91,7 @@ const displayVideoDetails = (video) => {
 </div>
     `;
 }
-
+//  ${video.authors[0].profile_picture.profile_name};
 
 
 
@@ -146,9 +146,10 @@ const displayVideos = (videos) => {
 
                         <h2 class="font-bold">${video.title}</h2>
                         <p class="text-gray-400 text-sm flex items-center gap-1">
-                            ${video.authors[0].profile_picture.profile_name}
+                            ${video.authors[0].profile_name}
 
-                            <img class="w-5 h-5 " src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000" alt="">
+                           ${video.authors[0].verified == true ? `<img class="w-5 h-5 " src="https://img.icons8.com/?size=100&id=98A4yZTt9abw&format=png&color=000000" alt="">` : ``}
+                            
 
                         </p>
 
@@ -173,4 +174,13 @@ const displayVideos = (videos) => {
 
 
 
+
+
+
+document.getElementById('such-input').addEventListener('keyup', (e) => {
+
+    const input = e.target.value;
+    loadVideos(input)
+
+});
 lodCaregories();
