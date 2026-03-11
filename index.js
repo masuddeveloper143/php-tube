@@ -2,7 +2,16 @@ console.log("index is connected");
 
 
 const showLoder = () => {
-document.getElementById('loder')
+    document.getElementById('loder').classList.remove('hidden');
+
+    document.getElementById('videos-container').classList.add("hidden");
+};
+
+
+const hideLoder = () => {
+    document.getElementById('loder').classList.add('hidden');
+
+    document.getElementById('videos-container').classList.remove("hidden");
 }
 
 
@@ -24,8 +33,12 @@ function lodCaregories() {
 };
 
 
+
 // loadVideo
 function loadVideos(searchText = "") {
+
+
+    showLoder();
     fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
         .then((Response) => Response.json())
         .then((data) => {
