@@ -1,5 +1,11 @@
 console.log("index is connected");
 
+
+const showLoder = () => {
+document.getElementById('loder')
+}
+
+
 function removeActiveClass() {
     const acctiveButton = document.getElementsByClassName("active")
 
