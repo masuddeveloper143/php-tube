@@ -20,7 +20,7 @@ function lodCaregories() {
 
 // loadVideo
 function loadVideos(searchText = "") {
-    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title${searchText}`)
+    fetch(`https://openapi.programming-hero.com/api/phero-tube/videos?title=${searchText}`)
         .then((Response) => Response.json())
         .then((data) => {
             removeActiveClass();
@@ -29,7 +29,7 @@ function loadVideos(searchText = "") {
         });
 }
 
- 
+
 
 const loadCategoryVideos = (id) => {
 
