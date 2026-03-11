@@ -52,6 +52,8 @@ function loadVideos(searchText = "") {
 
 const loadCategoryVideos = (id) => {
 
+    showLoder();
+
     const url = `https://openapi.programming-hero.com/api/phero-tube/category/${id}`;
 
     console.log(url);
@@ -112,6 +114,8 @@ const displayVideoDetails = (video) => {
   </div>
 </div>
     `;
+
+    
 }
 //  ${video.authors[0].profile_picture.profile_name};
 
@@ -189,6 +193,8 @@ const displayVideos = (videos) => {
         videosContainer.append(videoCrad);
 
     });
+
+    hideLoder();
 
 };
 
